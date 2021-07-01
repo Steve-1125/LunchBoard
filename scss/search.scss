@@ -374,3 +374,150 @@ footer{
         padding-top: 180px;
     }
 }
+
+@media screen and (max-width: 959px) {
+    main{
+        width: 480px;
+    }
+
+	.header{
+        &__container{
+            width: 480px;
+            &--logo{
+                float: none;
+                margin: 0 auto;
+                width: 50%;
+            }
+            &--sign{
+                float: none;
+                display: list-item;
+                list-style-type: none;
+                margin: 0 auto;
+                padding: 0;
+                &--sign-up{
+                    margin-top: 30px;
+                    width: 100%;
+                    font-size: 1.5rem;
+                }
+                &--login{
+                    width: 100%;
+                    margin-top: 20px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        &__menu{
+            margin-top: 30px;
+            width: 480px;
+            ul{
+                display: list-item;
+                list-style-type: none;
+                margin: 0 auto;
+                padding: 0;
+                li{
+                    width: 100%;
+                    text-align: center;
+                    padding: 5px;
+                    margin: 0 auto;
+                    border: none;
+                    a{
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .searchs{
+        display: none;
+    }
+
+    .footer{
+        &__container{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html{
+        font-size: 0.5rem;
+    }
+
+    main{
+        width: 350px;
+    }
+
+	.header{
+        &__container{
+            width: 350px;
+            &--logo{
+                float: none;
+                margin: 0 auto;
+                width: 50%;
+            }
+            &--sign{
+                float: none;
+                display: list-item;
+                list-style-type: none;
+                margin: 0 auto;
+                padding: 0;
+                &--sign-up{
+                    margin-top: 30px;
+                    width: 100%;
+                    font-size: 1.5rem;
+                }
+                &--login{
+                    width: 100%;
+                    margin-top: 20px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        &__menu{
+            margin-top: 30px;
+            width: 350px;
+            ul{
+                display: list-item;
+                list-style-type: none;
+                margin: 0 auto;
+                padding: 0;
+                li{
+                    width: 100%;
+                    text-align: center;
+                    padding: 5px;
+                    margin: 0 auto;
+                    border: none;
+                    a{
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .searchs{
+        display: none;
+    }
+
+    .foods__list{
+        img{
+            display: none;
+        }
+
+        &--text{
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    .footer{
+        &__container{
+            width: 100%;
+        }
+    }
+}
