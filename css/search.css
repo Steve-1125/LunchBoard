@@ -375,4 +375,130 @@ footer {
   color: white;
   padding-top: 180px;
 }
+
+@media screen and (max-width: 959px) {
+  main {
+    width: 480px;
+  }
+  .header__container {
+    width: 480px;
+  }
+  .header__container--logo {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+  }
+  .header__container--sign {
+    float: none;
+    display: list-item;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .header__container--sign--sign-up {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .header__container--sign--login {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+  .header__menu {
+    margin-top: 30px;
+    width: 480px;
+  }
+  .header__menu ul {
+    display: list-item;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .header__menu ul li {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    border: none;
+  }
+  .header__menu ul li a {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .searchs {
+    display: none;
+  }
+  .footer__container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 0.5rem;
+  }
+  main {
+    width: 350px;
+  }
+  .header__container {
+    width: 350px;
+  }
+  .header__container--logo {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+  }
+  .header__container--sign {
+    float: none;
+    display: list-item;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .header__container--sign--sign-up {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .header__container--sign--login {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+  .header__menu {
+    margin-top: 30px;
+    width: 350px;
+  }
+  .header__menu ul {
+    display: list-item;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .header__menu ul li {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    border: none;
+  }
+  .header__menu ul li a {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .searchs {
+    display: none;
+  }
+  .foods__list img {
+    display: none;
+  }
+  .foods__list--text {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer__container {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=search.css.map */
