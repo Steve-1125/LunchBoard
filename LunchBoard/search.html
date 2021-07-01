@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunch board</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="icon" href="img/icon.ico">
+  <link rel="stylesheet" href="https://github.com/necolas/normalize.css.git">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/search.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="header__container">
+      <a href="home.html"><img class="header__container--logo" src="img/header_logo.png" alt="logo">
+      </a>
+      <div class="header__container--sign">
+        <a class="header__container--sign--sign-up" href="#">新規登録</a>
+        <a class="header__container--sign--login" href="#">ログイン</a>
+      </div>
+    </div>
+    <nav class="header__menu">
+      <ul>
+        <li class="header__menu--current"><a href="explanation.html">Lunch boardとは？</a></li>
+        <li><a href="search.html">お店を探す</a></li>
+        <li><a href="introduction.html">お店を紹介する</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+  <div id="loading">
+    <div class="spinner"></div>
+  </div>
+  <script type="text/javascript" src="JavaScript/loading.js"></script>
+
+  <section class="searchs">
+    <h2>絞り検索</h2>
+    <ul>
+      <div class="searchs__block">
+        <li class="searchs__block--title"><p>キーワード検索</p></li>
+        <li class="searchs__block--contents">
+          <form action="/search-result/">
+            <input class="searchs__block--contents--text" placeholder="キーワードを入力" type="text" name="search-key" width="50px">
+          </form>
+        </li>
+      </div>
+      
+      <div class="searchs__block">
+        <li class="searchs__block--title"><p>表示順</p></li>
+        <li class="searchs__block--contents">
+          <form name="display">
+            <input class="searchs__block--contents--display" type="checkbox" value="r1" name="r1">おすすめ順
+            <input class="searchs__block--contents--display" type="checkbox" value="r2" name="r1">更新順
+            <input class="searchs__block--contents--display" type="checkbox" value="r3" name="r1">人気順
+          </form>
+        </li>
+      </div>
+      
+      <div class="searchs__block">
+        <li class="searchs__block--title"><p>ジャンル</p></li>
+        <li class="searchs__block--contents">
+          <form name="genre">
+            <input class="searchs__block--contents--genre" type="checkbox" value="r1" name="r1">和食
+            <input class="searchs__block--contents--genre" type="checkbox" value="r2" name="r1">アメリカ料理
+            <input class="searchs__block--contents--genre" type="checkbox" value="r3" name="r1">中華料理
+            <input class="searchs__block--contents--genre" type="checkbox" value="r4" name="r1">フランス料理
+            <input class="searchs__block--contents--genre" type="checkbox" value="r5" name="r1">イタリア料理
+            <input class="searchs__block--contents--genre" type="checkbox" value="r6" name="r1">ファストフード
+            <input class="searchs__block--contents--genre" type="checkbox" value="r7" name="r1">インド料理
+          </form>
+        </li>
+      </div>
+      
+      <div class="searchs__block">
+        <li class="searchs__block--title"><p>性別</p></li>
+        <li class="searchs__block--contents">
+          <form name="gender">
+          <input class="searchs__block--contents--gender" type="checkbox" value="r1" name="r1">男性
+          <input class="searchs__block--contents--gender" type="checkbox" value="r2" name="r1">女性
+        </form>
+      </li>
+      </div>
+      
+
+      <div  class="searchs__block">
+        <li class="searchs__block--title"><p>限定</p></li>
+        <li class="searchs__block--contents">
+          <form name="bonus">
+          <input class="searchs__block--contents--bonus" type="checkbox" value="r1" name="r1">公認店舗
+          <input class="searchs__block--contents--bonus" type="checkbox" value="r2" name="r1">学生割有効
+          <input class="searchs__block--contents--bonus" type="checkbox" value="r3" name="r1">クーポン有効
+          <input class="searchs__block--contents--bonus" type="checkbox" value="r4" name="r1">バズってるお店
+          </form>
+      </li>
+      </div>
+    </ul>
+
+    <div class="searchs__block--button">
+      <input type="submit" action="http://www.google.co.jp/search" value="検索" class="btn btn-outline-warning btn-lg">
+    </div>
+
+  </section>
+
+<article class="foods">
+  <h2 class="foods__title">注目ランキング</h2>
+
+  <div class="foods__box1">
+    <ul class="foods__list">
+      <li><h3>1位</h3></li>
+      <li class="foods__list--heading"><a href="#">【東京都○○区】学割あり！ボリューム満点のステーキ屋さん　○○○○</a></li>
+      <li><img src="img/beef.jpg" alt="人気１位"></li>
+      <li class="foods__list--text">
+        <p class="foods__list--text--tag">○○駅から徒歩〇分 / ○○大学、○○高校近辺 <br> 肉・ステーキ</p>
+        <p class="foods__list--text--intro">【月間ランキング5連続１位！】<br>ボリューム満点で尚且つジューシーで非常に美味なステーキ！！<br>学割もあり、安い！美味い！が叶う魅力的なお店！</p>
+        
+      </li>
+    </ul>
+  </div>
+  <div class="foods__box2">
+    <ul class="foods__list">
+      <li><h3>2位</h3></li>
+      <li class="foods__list--heading"><a href="#">【東京都○○区】伝統の味！串カツを食べて活力を付けよう！！　○○○○</a></li>
+      <li><img src="img/kushikatsu1.png" alt="人気2位"></li>
+      <li class="foods__list--text">
+        <p class="foods__list--text--tag">○○駅から徒歩〇分 / ○○大学近辺 <br> 揚げ物・串カツ</p>
+        <p class="foods__list--text--intro">【週間レビュー１位！！】<br>地元、大阪伝統の串カツ専門店！！<br>ランチは学生コース付き！！ディナーは予約で大会場貸し切り！新歓や打ち上げなどの飲み会に！</p>
+      </li>
+    </ul>
+  </div>
+  <div class="foods__box3">
+    <ul class="foods__list">
+      <li><h3>3位</h3></li>
+      <li class="foods__list--heading"><a href="#">【東京都○○区】あふれる肉汁とカリッとした衣、気づいたらなくなっている！そんなからあげ専門店！　○○○○</a></li>
+      <li><img src="img/karaage1.png" alt="人気3位"></li>
+      <li class="foods__list--text">
+        <p class="foods__list--text--tag">○○駅から徒歩〇分 / ○○高校近辺 <br> 揚げ物・からあげ</p>
+        <p class="foods__list--text--intro">【週間ランキング10週連続上位！】<br>食べたことない者はいない！！手軽に食べられるファストフード！！学割で15個が500円！！</p>
+      </li>
+    </ul>
+  </div>
+  <div class="foods__box4">
+    <ul class="foods__list">
+      <li><h3>4位</h3></li>
+      <li class="foods__list--heading"><a href="#">【東京都○○区】本格派カレーライスのお店！スパイス香る100時間煮込んだ絶品カレー　○○○○</a>
+      </li>
+      <li><img src="img/corry1.png" alt="人気4位"></li>
+      <li class="foods__list--text">
+        <p class="foods__list--text--tag">○○駅から徒歩〇分 / ○○大学、○○高校近辺 <br> インド料理・カレー</p>
+        <p class="foods__list--text--intro">【急上昇１位！！】<br>学生に大人気のカレーライス屋さん！<br>100時間も煮込んでいるのでとても濃厚でスパイスが効くとてもおいしいカレーライスが人気です。</p>
+      </li>
+    </ul>
+  </div>
+
+</article>
+
+</main>
+
+<footer>
+  <div class="footer__container">
+    <nav class="footer__nav">
+      <ul>
+        <li><a href="home.html">ホーム</a></li>
+        <li><a href="explanation.html">lunch boardとは</a></li>
+        <li><a href="search.html">お店を探す</a></li>
+        <li><a href="introduction.html">お店を紹介する</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <p class="footer__copylight">© 2020 Lunch Board</p>
+
+</footer>
+</body>
+</html>

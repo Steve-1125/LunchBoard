@@ -1,0 +1,523 @@
+// カラー
+// フォントカラー
+$font-mainclr: black;
+$font-subclr: white;
+// BGカラー
+$header-clr: #faa61a;
+$signup-clr: #d52f25;
+$login-clr: #339900;
+$slidshow-clr: rgba(255,224,182,0.5);
+$footer-clr: darkturquoise;
+// 線カラー
+$boder-mainclr: #eee;
+// 色変化
+$signup-changeclr: #f37053;
+$login-changeclr: #7ab977;
+
+// フォント
+$font-main: "fot-tsukuardgothic-std";
+$font-sub: "Arial";
+
+html{
+    font-family: $font-main,$font-sub;
+	font-size: 62.5%;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+body{
+    text-align: center;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 300px;
+    box-sizing: border-box;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+// ヘッダー
+header{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $header-clr;
+}
+
+.header{
+    &__container{
+        width: 980px;
+        margin: 0 auto;
+        padding-top: 20px;
+
+        &--logo{
+            width: 25%;
+            float: left;
+        }
+
+        &--sign{
+            float: right;
+            display:flex;
+            flex-direction: row;
+            font-size: 1.2rem;
+            margin: 10px 10px 0 0;
+
+            &--sign-up{
+                display: block;
+                background-color: $signup-clr;
+                padding: 10px 40px;
+                margin-right: 30px;
+                color: $font-subclr;
+                transition: all .4s;
+                &:hover{
+                    color: $font-subclr;
+                    background-color: $signup-changeclr;
+                }
+            }
+
+            &--login{
+                display: block;
+                background-color: $login-clr;
+                padding: 10px 40px;
+                color: $font-subclr;
+                transition: all .4s;
+                &:hover{
+                    color: $font-subclr;
+                    background-color: $login-changeclr;
+                }
+            }
+        
+        
+        }
+    }
+    &__menu{
+        width: 980px;
+        font-size: 2rem;
+        padding: 20px 0 10px 0;
+        margin: 80px auto 0 auto;
+        border-top: 1px solid $boder-mainclr;
+
+        ul{
+            display: flex;
+            &--current{
+                a{
+                    &:hover{
+                        color:white;
+                        &::after{
+                            transform: scale(1, 1);
+                        }
+                    }
+                }
+            }
+
+            li{
+                width: 25%;
+                a{
+                    display: block;
+                    color: $font-subclr;
+                    position: relative;
+                    transition: all .4s;
+                    &:hover{
+                        color:white;
+                        &::after{
+                            transform: scale(1, 1);
+                        }
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 10%;
+                        width: 80%;
+                        height: 2px;
+                        background: white;
+                        transition: all .3s;
+                        transform: scale(0, 1);
+                        transform-origin: center top;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// コンテンツ
+main{
+    width: 980px;
+    margin: 0 auto;
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+  
+#loading {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color: darkorange;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    margin: 200px auto;
+    background-color: #fff;
+    border-radius: 100%;
+    animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@keyframes sk-scaleout {
+    0% {
+      transform: scale(0);
+    } 100% {
+        transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+.searchs{
+    margin: 30px;
+    border: 3px solid $header-clr;
+
+    h2{
+        width: 75%;
+        margin: 0 auto;
+        font-size: 2.5rem;
+        padding: 10px 0;
+        border-bottom: 3px solid $boder-mainclr;
+    }
+
+    ul{
+        margin-top: 20px;
+    }
+
+    &__block{
+        text-align: center;
+        display: flex;
+        align-items: center;
+
+        &--title{
+            padding-top: 20px;
+            font-size: 1.5rem;
+        }
+    
+        &--contents{
+            margin: 10px 0 0 30px;
+            display: inline;
+            font-size: 1.5rem;       
+            
+            &--text{
+                margin-left: -10px;
+                padding-right: 150px;
+            }
+
+            &--display{
+                margin-left: 27px;
+                margin-right: 10px;
+            }
+
+            &--genre{
+                margin-left: 25px;
+                margin-right: 10px;
+            }
+
+            &--gender{
+                margin-left: 41px;
+                margin-right: 10px;
+            }
+
+            &--bonus{
+                margin-left: 40px;
+                margin-right: 10px;
+            }
+
+            input{
+                padding-right: 100px;
+            }
+        }
+    
+        
+
+        &--box{
+            font-size: 1.3rem;
+        }
+
+        &--button{
+            input{
+                font-size: 2rem;
+                text-align: center;
+                padding: 5px 100px;
+                margin: 10px 0 20px 0;
+            }
+        }
+    }
+}
+
+.foods{
+    margin-bottom: 100px;
+
+    &__title{
+        font-size: 3rem;
+        margin-top: 50px;
+        margin-bottom: 30px;
+        border-bottom: 2px solid $boder-mainclr;
+        padding-bottom: 10px;
+    }
+
+    &__box1{
+        margin-bottom: 80px;
+    }
+
+    &__box2{
+        margin-bottom: 100px;
+    }
+
+    &__box3{
+        margin-bottom: 110px;
+    }
+
+    &__list{
+        h3{
+            float: left;
+            font-size: 2.5rem;
+            border-left: 15px solid $header-clr;
+            padding-left: 10px;
+        }
+    
+        &--heading{
+            text-align: left;
+            padding-left: 80px;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid $header-clr;
+        }
+    
+        img{
+            width:  30%;
+            margin-right: 50px;
+            float: left;
+        }
+    
+        &--text{
+            width: 50%;
+            text-align: left;
+            margin-left: 300px;
+            font-size: 1.8rem;
+            &--tag{
+                margin: 0 auto;
+                border-bottom: 1px solid $boder-mainclr;
+                padding-bottom: 5px;
+            }
+            &--intro{
+                padding-top: 5px;
+            }
+        }
+    }
+    
+
+}
+  
+
+  
+  
+  
+
+
+
+// フッター
+footer{
+    width: 100%;
+	padding-top: 50px;
+	background-color: $footer-clr;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer{
+    &__container{
+        width: 980px;
+        margin: 0 auto;
+        nav{
+            ul{
+                list-style-type: none;
+                float: left;
+                font-size: 1.3rem;
+                text-align: left;
+            }
+            li{
+                padding-bottom: 10px;
+                a{
+                    color: $font-subclr;
+                    transition: all .4s;                    
+                }
+            }
+    
+        }
+    }
+
+    &__copylight{
+        font-size: 1.5rem;
+        margin: 0 auto;
+        color: $font-subclr;
+        padding-top: 180px;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    main{
+        width: 480px;
+    }
+
+	.header{
+        &__container{
+            width: 480px;
+            &--logo{
+                float: none;
+                margin: 0 auto;
+                width: 50%;
+            }
+            &--sign{
+                float: none;
+                display: list-item;
+                list-style-type: none;
+                margin: 0 auto;
+                padding: 0;
+                &--sign-up{
+                    margin-top: 30px;
+                    width: 100%;
+                    font-size: 1.5rem;
+                }
+                &--login{
+                    width: 100%;
+                    margin-top: 20px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        &__menu{
+            margin-top: 30px;
+            width: 480px;
+            ul{
+                display: list-item;
+                list-style-type: none;
+                margin: 0 auto;
+                padding: 0;
+                li{
+                    width: 100%;
+                    text-align: center;
+                    padding: 5px;
+                    margin: 0 auto;
+                    border: none;
+                    a{
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .searchs{
+        display: none;
+    }
+
+    .footer{
+        &__container{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html{
+        font-size: 0.5rem;
+    }
+
+    main{
+        width: 350px;
+    }
+
+	.header{
+        &__container{
+            width: 350px;
+            &--logo{
+                float: none;
+                margin: 0 auto;
+                width: 50%;
+            }
+            &--sign{
+                float: none;
+                display: list-item;
+                list-style-type: none;
+                margin: 0 auto;
+                padding: 0;
+                &--sign-up{
+                    margin-top: 30px;
+                    width: 100%;
+                    font-size: 1.5rem;
+                }
+                &--login{
+                    width: 100%;
+                    margin-top: 20px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        &__menu{
+            margin-top: 30px;
+            width: 350px;
+            ul{
+                display: list-item;
+                list-style-type: none;
+                margin: 0 auto;
+                padding: 0;
+                li{
+                    width: 100%;
+                    text-align: center;
+                    padding: 5px;
+                    margin: 0 auto;
+                    border: none;
+                    a{
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .searchs{
+        display: none;
+    }
+
+    .foods__list{
+        img{
+            display: none;
+        }
+
+        &--text{
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    .footer{
+        &__container{
+            width: 100%;
+        }
+    }
+}
